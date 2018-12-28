@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LecheYMielGanado</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ganaderia_leche_y_miel">Ganaderia Leche Y Miel</string>
+    <string name="iniciar_seccion">Iniciar Seccion</string>
+    <string name="registrar_usuario">Registrar Usuario</string>
+    <string name="usario">Usuario</string>
+    <string name="nombre">Nombre</string>
+    <string name="password">Contraseña</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="registrate">registrate</string>
+    <string name="no_tienes_cuenta">no tienes cuenta?</string>
+    <string name="recordarme">Recordarme</string>
+</resources>
