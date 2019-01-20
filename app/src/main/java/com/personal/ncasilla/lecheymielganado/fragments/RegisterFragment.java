@@ -9,8 +9,10 @@ import android.view.ViewGroup;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.personal.ncasilla.lecheymielganado.R;
+import com.personal.ncasilla.lecheymielganado.models.User;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +30,7 @@ public class RegisterFragment extends Fragment {
     }
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,13 +39,16 @@ public class RegisterFragment extends Fragment {
 
         nameEditText = view.findViewById(R.id.regis_name);
         userEditText = view.findViewById(R.id.regis_username);
-        passwordEditText = view.findViewById(R.id.groups);
+        passwordEditText = view.findViewById(R.id.regis_password);
         registerButton = view.findViewById(R.id.register_button);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fragmentListener.signUp();
+                User user = new User(userEditText.getText().toString(),
+                        nameEditText.getText().toString(),
+                        passwordEditText.getText().toString());
+                fragmentListener.signUp(user);
             }
         });
 
@@ -55,7 +61,7 @@ public class RegisterFragment extends Fragment {
 
     public interface OnRegisterFragmentListener{
 
-        void signUp();
+        void signUp(User user);
     }
 
 }

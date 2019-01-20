@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 import com.personal.ncasilla.lecheymielganado.R;
+import com.personal.ncasilla.lecheymielganado.models.User;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,7 +55,10 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.login:
-                fragmentListener.logIn();
+                User user = new User(usernameText.getText().toString(),
+                        "",
+                        passwordText.getText().toString());
+                fragmentListener.logIn(user);
                 break;
             case R.id.signup_button:
                 fragmentListener.goToRegister();
@@ -63,7 +67,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     }
 
     public interface OnLoginFragmentListener {
-        void logIn();
+        void logIn(User user);
 
         void goToRegister();
     }

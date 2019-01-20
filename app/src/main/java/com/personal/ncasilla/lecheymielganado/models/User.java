@@ -1,14 +1,25 @@
 package com.personal.ncasilla.lecheymielganado.models;
 
+import java.io.Serializable;
+
 /**
  * Created by Ney Casilla on 12/1/2018.
  */
 
-public class User {
+public class User implements Serializable {
     private String email;
     private String username;
     private String password;
-    private String completeName;
+
+    public User(){
+
+    }
+
+    public User(String email, String username, String password) {
+        this.email = email;
+        this.username = username;
+        this.password = password;
+    }
 
     public String getEmail() {
         return email;
@@ -34,12 +45,5 @@ public class User {
         this.password = password;
     }
 
-    public String getCompleteName() {
-        return completeName;
-    }
-
-    public void setCompleteName(String completeName) {
-        this.completeName = completeName;
-    }
 
 }

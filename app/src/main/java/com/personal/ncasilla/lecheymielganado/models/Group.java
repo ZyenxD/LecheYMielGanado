@@ -5,8 +5,10 @@ package com.personal.ncasilla.lecheymielganado.models;
  */
 
 public class Group {
+
+    private String name;
     private User[] users;
-    private Cows[] cows;
+    private Cow[] cows;
 
     public User[] getUsers() {
         return users;
@@ -16,11 +18,18 @@ public class Group {
         this.users = users;
     }
 
-    public Cows[] getCows() {
+    public Cow[] getCows() {
         return cows;
     }
 
-    public void setCows(Cows[] cows) {
+    public void setCows(Cow[] cows) {
         this.cows = cows;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 }

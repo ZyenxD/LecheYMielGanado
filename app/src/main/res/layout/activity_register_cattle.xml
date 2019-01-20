@@ -4,10 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.personal.ncasilla.lecheymielganado.activities.CattelListActivity">
-    <ListView
-        android:id="@+id/cattel_listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    tools:context=".activities.RegisterCattleActivity">
 
 </android.support.constraint.ConstraintLayout>

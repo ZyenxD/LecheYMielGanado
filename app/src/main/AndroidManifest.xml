@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.CattelListActivity"></activity>
+        <activity android:name=".activities.CattleListActivity" />
+        <activity android:name=".activities.RegisterCattleActivity" />
+        <activity android:name=".activities.ViewCowInfoActivity"></activity>
     </application>
 
 </manifest>

@@ -6,11 +6,17 @@
     <string name="ganaderia_leche_y_miel">Ganaderia Leche Y Miel</string>
     <string name="iniciar_seccion">Iniciar Seccion</string>
     <string name="registrar_usuario">Registrar Usuario</string>
-    <string name="usario">Usuario</string>
+    <string name="mail">Email</string>
     <string name="nombre">Nombre</string>
     <string name="password">Contraseña</string>
     <string name="registrarse">Registrarse</string>
     <string name="registrate">registrate</string>
     <string name="no_tienes_cuenta">no tienes cuenta?</string>
     <string name="recordarme">Recordarme</string>
+    <string name="nombre_finca">Nombre Finca</string>
+    <string name="code">Codigo</string>
+    <string name="gender">Genero</string>
+    <string name="age">Edad</string>
+    <string name="color">Color</string>
+    <string name="characs">Carateristicas</string>
 </resources>

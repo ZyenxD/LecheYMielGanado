@@ -1,17 +1,20 @@
 package com.personal.ncasilla.lecheymielganado.models;
 
+import android.graphics.Bitmap;
+
 /**
  * Created by Ney Casilla on 12/1/2018.
  */
 
-public class Cows {
+public class Cow {
     private int id;
     private String nameCode;
     private String gender;
-    private String age;
-    private String Color;
-    private String Characteristic;
-    private Cows[] calfs;
+    private int age;
+    private String color;
+    private Bitmap image;
+    private String characteristic;
+    private Cow[] calfs;
 
     public int getId() {
         return id;
@@ -37,35 +40,43 @@ public class Cows {
         this.gender = gender;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
     public String getColor() {
-        return Color;
+        return color;
     }
 
     public void setColor(String color) {
-        Color = color;
+        this.color = color;
+    }
+
+    public Bitmap getImage() {
+        return image;
+    }
+
+    public void setImage(Bitmap image) {
+        this.image = image;
     }
 
     public String getCharacteristic() {
-        return Characteristic;
+        return characteristic;
     }
 
     public void setCharacteristic(String characteristic) {
-        Characteristic = characteristic;
+        this.characteristic = characteristic;
     }
 
-    public Cows[] getCalfs() {
+    public Cow[] getCalfs() {
         return calfs;
     }
 
-    public void setCalfs(Cows[] calfs) {
+    public void setCalfs(Cow[] calfs) {
         this.calfs = calfs;
     }
 }
