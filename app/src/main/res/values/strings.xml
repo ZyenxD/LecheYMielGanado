@@ -17,6 +17,10 @@
     <string name="code">Codigo</string>
     <string name="gender">Genero</string>
     <string name="age">Edad</string>
-    <string name="color">Color</string>
     <string name="characs">Carateristicas</string>
+    <string name="add">Añadir Ganado</string>
+    <string name="charac">Caracteristicas</string>
+    <string name="color">Color</string>
+    <string name="edad">Edad</string>
+    <string name="name">Nombre</string>
 </resources>
