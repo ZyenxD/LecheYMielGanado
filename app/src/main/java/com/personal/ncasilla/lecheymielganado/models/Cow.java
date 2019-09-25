@@ -10,9 +10,9 @@ public class Cow {
     private int id;
     private String nameCode;
     private String gender;
-    private int age;
+    private String age;
     private String color;
-    private Bitmap image;
+    private String image;
     private String characteristic;
     private Cow[] calfs;
 
@@ -40,11 +40,11 @@ public class Cow {
         this.gender = gender;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -56,11 +56,11 @@ public class Cow {
         this.color = color;
     }
 
-    public Bitmap getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(Bitmap image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

@@ -1,6 +1,9 @@
 package com.personal.ncasilla.lecheymielganado.adapters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,8 +50,13 @@ public class CowAdapter extends ArrayAdapter<Cow> {
         cowAge.setText( String.valueOf(cow.getAge()) );
         cowCharac.setText(cow.getCharacteristic());
         cowColor.setText(cow.getColor());
-        cowImage.setImageBitmap(cow.getImage());
+        cowImage.setImageBitmap(decodeFromFirebaseBase64(cow.getImage()));
         return convertView;
+    }
+
+    private Bitmap decodeFromFirebaseBase64(String image){
+        byte[] decodedBytes = android.util.Base64.decode(image, Base64.DEFAULT);
+        return BitmapFactory.decodeByteArray(decodedBytes,0,decodedBytes.length);
     }
 
     @Override
