@@ -14,7 +14,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,12 +46,15 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cow_gender_field"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="24dp"
-                    android:layout_marginTop="24dp"
-                    android:hint="@string/gender"
-                    >
+                    android:layout_marginTop="24dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gender"/>
                     <Spinner
                         android:id="@+id/cow_gender_spinner"
                         android:layout_width="match_parent"
@@ -61,23 +64,110 @@
                         android:layout_marginTop="24dp"
                         android:entries="@array/genders"/>
                 </com.google.android.material.textfield.TextInputLayout>
-
-
-
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cow_status_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="24dp"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/status"/>
+                    <Spinner
+                        android:id="@+id/cow_status_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:selectedItemPosition="@={viewModel.status}"
+                        android:onItemSelected="@{(parent, view, pos, id)->viewModel.onItemSelected(parent, view, pos, id)}"
+                        android:layout_marginTop="24dp"
+                        android:entries="@array/status"/>
+                </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="24dp"
-                    android:layout_marginTop="24dp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/cattel_age"
+                    android:layout_marginTop="24dp"
+                    >
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@={viewModel.age}"
-                        android:nextFocusDown="@id/cattel_color"
-                        android:lines="1"
-                        android:hint="@string/edad" />
+                        android:text="@string/born_here"/>
+                    <Spinner
+                        android:id="@+id/cow_bornhere_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:selectedItemPosition="@={viewModel.bornHere}"
+                        android:onItemSelected="@{(parent, view, pos, id)->viewModel.onItemSelected(parent, view, pos, id)}"
+                        android:layout_marginTop="24dp"
+                        android:entries="@array/bornHere"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cattel_age_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="24dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/age"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Spinner
+                            android:id="@+id/cow_year_spinner"
+                            android:selectedItemPosition="@={viewModel.year}"
+                            android:onItemSelected="@{(parent, view, pos, id)->viewModel.onItemSelected(parent, view, pos, id)}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="@string/years"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Spinner
+                            android:id="@+id/cow_months_spinner"
+                            android:selectedItemPosition="@={viewModel.month}"
+                            android:onItemSelected="@{(parent, view, pos, id)->viewModel.onItemSelected(parent, view, pos, id)}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="@string/months"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cow_date_picker_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="24dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/born_date"/>
+
+                    <com.personal.ncasilla.lecheymielganado.util.CustomDatePicker
+                        android:id="@+id/cow_date_picker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -117,6 +207,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
                     android:text="@string/add" />
 
             </LinearLayout>
@@ -124,7 +215,7 @@
             <ProgressBar
                 android:id="@+id/progress_bar_register"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:visibility="gone"
                 android:layout_centerInParent="true"/>
 

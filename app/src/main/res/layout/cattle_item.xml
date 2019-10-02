@@ -6,13 +6,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
 
         <ImageView
             android:id="@+id/cattle_imageView"
-            android:layout_width="180dp"
+            android:layout_width="208dp"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
@@ -29,6 +29,8 @@
                 android:layout_height="wrap_content">
                 <TextView
                     android:text="@string/code"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <TextView
@@ -41,7 +43,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="@string/gender"
+                    android:text="@string/gender_field"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <TextView
@@ -55,6 +59,8 @@
                 android:layout_height="wrap_content">
                 <TextView
                     android:text="@string/age"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <TextView
@@ -67,7 +73,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="@string/color"
+                    android:text="@string/color_field"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <TextView
@@ -81,6 +89,8 @@
                 android:layout_height="wrap_content">
                 <TextView
                     android:text="@string/characs"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <TextView

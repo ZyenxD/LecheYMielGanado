@@ -14,13 +14,20 @@
     <string name="no_tienes_cuenta">no tienes cuenta?</string>
     <string name="recordarme">Recordarme</string>
     <string name="nombre_finca">Nombre Finca</string>
-    <string name="code">Codigo</string>
+    <string name="code">Codigo:</string>
     <string name="gender">Genero</string>
-    <string name="age">Edad</string>
-    <string name="characs">Carateristicas</string>
+    <string name="gender_field">Genero:</string>
+    <string name="age">Edad:</string>
+    <string name="characs">Carateristicas:</string>
     <string name="add">Añadir Ganado</string>
     <string name="charac">Caracteristicas</string>
     <string name="color">Color</string>
+    <string name="color_field">Color:</string>
     <string name="edad">Edad</string>
     <string name="name">Nombre</string>
+    <string name="status">Estado</string>
+    <string name="born_here">Nacio en la finca</string>
+    <string name="born_date">fecha de nacimiento</string>
+    <string name="years">Años</string>
+    <string name="months">Meses</string>
 </resources>

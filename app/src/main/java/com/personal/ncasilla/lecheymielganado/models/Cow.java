@@ -10,6 +10,8 @@ public class Cow {
     private int id;
     private String nameCode;
     private String gender;
+    private String status;
+    private boolean bornHere;
     private String age;
     private String color;
     private String image;
@@ -70,6 +72,22 @@ public class Cow {
 
     public void setCharacteristic(String characteristic) {
         this.characteristic = characteristic;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public boolean isBornHere() {
+        return bornHere;
+    }
+
+    public void setBornHere(boolean bornHere) {
+        this.bornHere = bornHere;
     }
 
     public Cow[] getCalfs() {
